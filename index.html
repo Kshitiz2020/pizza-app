@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pizza.css" />
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="h1">
+          <i class="fa-solid fa-pizza-slice"></i> Bake Your Pizza With Us<i
+            class="fa-solid fa-pizza-slice reflect"
+          >
+          </i>
+        </h1>
+
+        <div class="customer-name">
+          <input
+            type="text"
+            class="name"
+            id="nam"
+            required
+            placeholder="Customer Name"
+          />
+        </div>
+        <div class="size-of-pizza-container">
+          <h2>Pizza Size</h2>
+          <div class="size-of-pizza-description">
+            <div>
+              <div>
+                <input
+                  type="radio"
+                  name="pizz-price"
+                  class="pizza"
+                  id="radio1"
+                />
+                <label for="radio1">
+                  <img src="pizza1.jpg" alt="pizza image" />
+                  <span>2 Serving 7,50€</span>
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  class="pizza"
+                  name="pizz-price"
+                  id="radio2"
+                />
+                <label for="radio2">
+                  <img src="pizza1.jpg" alt="pizza image" />
+                  <span>4 Serving 10,50€ </span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <div>
+                <input
+                  type="radio"
+                  class="pizza"
+                  name="pizz-price"
+                  id="radio3"
+                />
+                <label for="radio3">
+                  <img src="pizza1.jpg" alt="pizza image" />
+                  <span>6 Serving 12,50€</span></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  class="pizza"
+                  name="pizz-price"
+                  id="radio4"
+                />
+                <label for="radio4">
+                  <img src="pizza1.jpg" alt="pizza image" />
+                  <span>8 Serving 15,50€</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="topping-title">
+          Topping your Favorite! Enhances the Taste and just ¢.50 for 5th and
+          Onwards:<i class="fa-solid fa-face-kiss-wink-heart"></i>
+        </p>
+
+        <div class="topping">
+          <div>
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="BROCCOLI"
+                id="topping-1"
+              />
+
+              <label for="topping-1">BROCCOLI</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="POTATO"
+                id="topping-2"
+              />
+              <label for="topping-2">POTATO</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="SAUSAGE"
+                id="topping-3"
+              />
+              <label for="topping-3">SAUSAGE</label>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="BACON"
+                id="topping-4"
+              />
+              <label for="topping-4">BACON</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="TUNA"
+                id="topping-5"
+              />
+              <label for="topping-5">TUNA</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="MUSHROOM"
+                id="topping-6"
+              />
+              <label for="topping-6">MUSHROOM</label>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="RADICCHI"
+                id="topping-7"
+              />
+              <label for="topping-7">RADICCHI</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="EGGPLANT"
+                id="topping-8"
+              />
+              <label for="topping-8">EGGPLANT</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="CAPSICUM"
+                id="topping-9"
+              />
+              <label for="topping-9">CAPSICUM</label>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="CHEESE"
+                id="topping-10"
+              />
+              <label for="topping-10">CHEESE</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="TACO"
+                id="topping-11"
+              />
+              <label for="topping-11">TACO</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                class="check"
+                value="GARLIC"
+                id="topping-12"
+              />
+              <label for="topping-12">GARLIC</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="delivery-method">
+          <label for="deliveryMethod">Delivery Method:</label>
+          <select id="deliveryMethod" name="deliveryMethod">
+            <option>SELECT OPTIONS</option>
+            <option value="delivery">Delivery Home, +5€</option>
+            <option value="pickup">Pickup</option>
+            <option value="dineIn">Dine-In</option>
+          </select>
+        </div>
+        <div class="submit-button">
+          <button>ORDER</button>
+        </div>
+      </div>
+    </div>
+    <div id="your-pizza"></div>
+    <script
+      src="https://kit.fontawesome.com/278c8d5eb1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
