@@ -153,6 +153,11 @@ p.topping-title > .fa-face-kiss-wink-heart {
   border-radius: 0.35rem;
   font-size: 1.5rem;
 }
+
+.bills {
+  text-align: center;
+  color: grey;
+}
 /*.size-of-pizza > div > img {
 width:100%;
 height: 100%;

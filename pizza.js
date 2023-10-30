@@ -1,24 +1,34 @@
-const formElement = document.querySelector("[data-form]");
-//const finalOrderBillElement = document.querySelector("#final-order-bill");
+/* const formElement = document.querySelector("[data-form]");
+const finalOrderBillElement = document.querySelector("#final-order-bill");
 const orderButtonElement = document.querySelector("#submit-button");
+ */
+
+const formElement = document.querySelector("[data-form]");
+const finalOrderBillElement = document.querySelector("#final-order-bill");
+const sizeOptions = document.querySelectorAll('input[type="radio"]');
+const customerNameElement = document.querySelector("#nam");
+const priceOfToppingElement = document.querySelectorAll(
+  'input[type="checkbox"]'
+);
+const priceOfDeliveryElement = document.querySelector("#deliveryMethod");
+
+/* const bill = document.querySelector("#final-order-bill");
 
 formElement.addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault();*/
 
-  const customerNameElement = document.querySelector("[data-customer-name]"); // by data
+//const customerNameElement = document.querySelector("[data-customer-name]"); // by data
 
-  const priceOfPizzaElement = document.querySelector(
-    "[data-pizza-size]:checked"
+//const priceOfPizzaElement = document.querySelector(
+//  "[data-pizza-size]:checked"
+//);
+
+//const priceOfToppingElement = document.querySelectorAll(
+/*   "[data-topping]:checked"
   );
 
-  const priceOfToppingElement = document.querySelectorAll(
-    "[data-topping]:checked"
-  );
-
-  const priceOfDeliveryElement = document.querySelector("[data-delivery-mode]");
-
-  const bill = document.querySelector("#final-order-bill");
-});
+  ////const priceOfDeliveryElement = document.querySelector("[data-delivery-mode]");
+}); */
 
 const pizzaOrder = () => {
   let customerName = customerNameElement.value;
@@ -35,24 +45,24 @@ const pizzaOrder = () => {
   });
 
   switch (sizeResult) {
-    case "size2":
+    case "radio1":
       price += 7.5;
       break;
 
-    case "size4":
+    case "radio2":
       price += 19.5;
       break;
 
-    case "size6":
+    case "radio3":
       price += 12.5;
       break;
 
-    case "size8":
+    case "radio4":
       price += 15.5;
       break;
   }
 
-  toppingResult.forEach((item) => {
+  priceOfToppingElement.forEach((item) => {
     if (item.checked) {
       toppingResult.push(item.value);
     }
@@ -64,6 +74,6 @@ const pizzaOrder = () => {
   if (deliveryResult === 5) {
     price += 5;
   }
-  bill.textContent = price.toFixed(2);
+  finalOrderBillElement.textContent = price.toFixed(2);
 };
-formElement.addEventListener("input", pizzaOrder);
+formElement.addEventListener("submit", pizzaOrder);
